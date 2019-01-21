@@ -1,8 +1,8 @@
 function Branch() {
   this.finished = false;
   this.len = 150;
-  this.x;
-  this.y;
+  this.x =150;
+  this.y =150;
   this.r = 150;
   
   this.number = random(0.8 ,0.15);
@@ -11,9 +11,8 @@ function Branch() {
   this.show = function() {
     stroke(255);
 
-  this.x =150;
-  this.y =150;
-  ellipse(this.x, this.y, this.r, this.r);
+  
+ellipse(this.x, this.y, this.r, this.r);
    
   }
 

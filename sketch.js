@@ -12,12 +12,12 @@ function setup() {
     canvas.style('z-index', '3');
   var root = new Branch();
   tree[0] = root;
-  background(51);
+
 }
 
 
 function draw() {
-
+fill(51)
   for (var j = 0; j < tree.length; j++) {
     tree[j].show();
       tree[j].move();
