@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Meer info</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TLSGFJT');</script>
+<!-- End Google Tag Manager -->
+        
+    
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+<style>
+body, html {
+    height: 100%;
+    font-family: "Inconsolata", sans-serif;
+}
+.bgimg {
+    background-position: center;
+    background-size: cover;
+    background-image: url("img/family1.gif");
+    min-height: 75%;
+}
+.menu {
+    display: none;
+}
+</style>
+    </head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TLSGFJT"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+    
+    
+
+<!-- Links (sit on top) -->
+<div class="w3-top">
+  <div class="w3-row w3-padding w3-black">
+    <div class="w3-col s3">
+      <a href="http://www.patientje.nl/" class="w3-button w3-block w3-black">Patientje.nl</a>
+    </div>
+    <div class="w3-col s3">
+      <a href="http://www.patientje.nl/evennaar.html" class="w3-button w3-block w3-black">Even naar</a>
+    </div>
+    <div class="w3-col s3">
+      <a href="http://www.patientje.nl/keserfeed.php" class="w3-button w3-block w3-black">Keser feed</a>
+    </div>
+    <div class="w3-col s3">
+      <a href="http://www.patientje.nl/tester.php" class="w3-button w3-block w3-black">Woord van de dag</a>
+    </div>
+  </div>
+</div>
+
+<!-- Header with image -->
+<header class="bgimg w3-display-container w3-grayscale-min" id="home">
+
+  <div class="w3-display-middle w3-center">
+    <span class="w3-text-white" style="font-size:90px">Het leven van een<br>Patient</span>
+  </div>
+
+</header>
+
+<!-- Add a background color and large text to the whole page -->
+<div class="w3-sand w3-grayscale w3-large">
+
+<!-- About Container -->
+<div class="w3-container" id="about">
+  <div class="w3-content" style="max-width:700px">
+    <h5 class="w3-center w3-padding-64"><span class="w3-tag w3-wide">Over patientje.nl</span></h5>
+    <p>Patientje.nl is een project om beter te worden. Beter waarin? Alles wat met design, animatie en development te maken heeft. Deze site laat een overzicht zien van mijn projecten, hoofdpijntjes en andere kwalen.</p>
+    <p>Voor de kenner makkelijker te zien dan voor anderen. Inderdaad, voor deze website is gebruik gemaakt van een P5 javascript bibliotheek, PHP, bootstrap en W3 templates. Vooral om maar gewoon bezig te zijn met deintegratie en diversiteit van deze middelen.</p>
+    <div class="w3-panel w3-leftbar w3-light-grey">
+      <p><i>"The way to get started is to quit talking and start doing" <br>Een mooi motto om beter te worden.</i></p>
+       </div>
+  </div>
+</div>
+<!-- Contact/Area Container -->
+<div class="w3-container" id="where" style="padding-bottom:32px;">
+  <div class="w3-content" style="max-width:700px">
+    
+    <p><span class="w3-tag">FYI!</span> Heb jij een project in gedachten? Wil je ook beter worden? Ben je al beter en wil je iets delen? Ik kijk graag met je mee.</p>
+    <p><strong>Hier</strong> Kun je binnenkort een bericht achterlaten (want database- linking staat nu vrij hoog op mijn lijst:</p>
+    <form action="/action_page.php" method="post" target="_blank">
+      <p><input class="w3-input w3-padding-16 w3-border" name="name" type="text" placeholder="Name" required name="Name"></p>
+      <p><input class="w3-input w3-padding-16 w3-border" name="onderwerp" type="text" placeholder="onderwerp" required name="People"></p>
+      <p><input class="w3-input w3-padding-16 w3-border" name="date" type="datetime-local" placeholder="Date and time" required name="date" value="2018-05-11T20:00"></p>
+      <p><input class="w3-input w3-padding-16 w3-border" name="Message" type="text" placeholder="Message \ Special requirements" required name="Message"></p>
+      <p><button class="w3-button w3-black" type="submit">SEND MESSAGE</button></p>
+    </form>
+      <p>Tot die tijd kun je me bellen/mailen/appen en social media-eren</p>
+  </div>
+</div>
+
+<!-- End page content -->
+</div>
+
+<!-- Footer -->
+<footer class="w3-center w3-light-grey w3-padding-48 w3-large">
+  <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a></p>
+</footer>
+
+<!-- Add Google Maps -->
+<script>
+function alarmeren(){
+    alert('sorry, nog niet aan toegekomen');
+    
+};
+    
+    function myMap()
+{
+  myCenter=new google.maps.LatLng(41.878114, -87.629798);
+  var mapOptions= {
+    center:myCenter,
+    zoom:12, scrollwheel: false, draggable: false,
+    mapTypeId:google.maps.MapTypeId.ROADMAP
+  };
+  var map=new google.maps.Map(document.getElementById("googleMap"),mapOptions);
+
+  var marker = new google.maps.Marker({
+    position: myCenter,
+  });
+  marker.setMap(map);
+}
+
+// Tabbed Menu
+function openMenu(evt, menuName) {
+  var i, x, tablinks;
+  x = document.getElementsByClassName("menu");
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < x.length; i++) {
+     tablinks[i].className = tablinks[i].className.replace(" w3-dark-grey", "");
+  }
+  document.getElementById(menuName).style.display = "block";
+  evt.currentTarget.firstElementChild.className += " w3-dark-grey";
+}
+document.getElementById("myLink").click();
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBu-916DdpKAjTmJNIgngS6HL_kDIKU0aU&callback=myMap"></script>
+<!--
+To use this code on your website, get a free API key from Google.
+Read more at: https://www.w3schools.com/graphics/google_maps_basic.asp
+-->
+
+</body>
+</html>

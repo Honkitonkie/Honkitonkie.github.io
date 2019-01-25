@@ -1,0 +1,48 @@
+body,h1 {font-family: "Raleway", sans-serif;}
+body, html {
+    width: 100%;
+    height: auto;
+	background:lightblue;
+        
+}
+
+nav{
+text-decoration:none;
+font-size:22px;
+color:white;
+
+}
+
+
+h1 {
+    color: red;
+    text-align: center;
+}
+
+#view {
+    background: cover;
+    
+    
+}
+
+
+#hoi {
+     background-color: lightblue;
+    text-align: center;
+    font-weight: bold;
+    
+    font-size: 300%;
+}
+
+#quote{
+    background-color: lightblue;
+    text-align: center;
+    font-style: italic;  
+}
+
+#author{
+    background-color: lightblue;
+    text-align: center;
+    align-content: center;
+}
+
