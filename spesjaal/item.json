@@ -1,0 +1,30 @@
+{
+			"name": "https://api-sandbox.abnamro.com/v1/tikkie/fastcheckout/orders",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "API-Key",
+						"value": "RW4UA984TFFxP96JbV66kA4lnEeJXknk",
+						"type": "text"
+					},
+					{
+						"key": "X-Merchant-Token",
+						"value": "\"\"",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Cache-Control",
+						"value": "no-cache",
+						"type": "text"
+					}
+                    };

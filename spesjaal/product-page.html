@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>spesjaal</title>
+    <script src="p5.js"></script>
+    <script src="p5.dom.js"></script>
+    <script src="p5.sound.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.7.2/firebase.js"></script>
+    <script src="sketch.js"></script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <link href="https://fonts.googleapis.com/css?family=Reenie+Beanie" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+   
+    <style>
+        body {
+            z-index: -3;
+            margin: 0;
+            margin-left: 45px;
+            padding: 0;
+            overflow: none;
+            max-height: 100%;
+        }
+        
+        canvas {
+            margin: auto;
+        }
+        
+        .error {
+            color: #FF0000;
+        }
+        
+        .succes {
+            color: #FF0000;
+        }
+
+        
+        #defaultCanvas0{
+        overflow: hidden;    
+        }
+        
+
+        
+    </style>
+</head>
+
+<body>
+    <script>
+$(document).ready(function(){
+  document.getElementById("spes").innerHTML = spesjaalval;
+});
+    </script>
+   
+        <div id="shopping"> Items in wagen: <span id="noitems"> 0 </span> <i class="fa fa-shopping-cart fa-3x"></i> </div>
+     
+    <div id="container" class="w3-display-middle w3-hide-small">
+         
+                <input class="bestellen" type="text" id="email" name="email" placeholder="Email ivm de verzendstatus">
+                <input class="bestellen" type="text" id="postcode" name="postcode" placeholder="Postcode voor verzending">
+                <input class="bestellen" type="number" id="nummer" name="nummer" min="0" placeholder="10 cijferig mobiele nummer" maxlength="10">
+                <br>
+                <br>
+                <div class="debestelling"><span class="paddme">Te bestellen:</span>
+                    <br>
+                    <div id="spes" style="margin-left:65px;">
+
+    
+             Dit zet geen zijde aan de dijk,, <br><br>postings werden opgevangen doormiddel van PHP. <br>Patientje.nl is alleen niet gekoppeld aan een server. 
+
+
+    
+                    </div>
+
+                </div>
+
+                </div>
+           <button type="submit" id="one" class="w3-center w3-display-middle w3-button w3-round-xlarge w3-button w3-hover-black w3-button w3-white w3-border w3-border-black w3-round-large" onclick="validateForm()">Bestel</button>
+
+    
+    <script>
+            
+            
+            function validateForm() {
+                //HET MAG NIET LEEG ZIJN    
+                magnietleegzijn();
+                postcode();
+                nummer();
+                geencode();
+                if (magnietleegzijn() === true && postcode() === true && nummer() === true && geencode() === true) {
+                    return true;
+                }
+                else {
+                    return false;
+                }
+            } //EINDE VALIDATEFORM
+            function magnietleegzijn() {
+                var email = document.forms["Adres"]["email"].value;
+                var nummer = document.forms["Adres"]["postcode"].value;
+                var postcode = document.forms["Adres"]["nr"].value;
+                if ((email == "") || (nummer == "") || (postcode == "")) {
+                    alert("Niet alles is ingevuld");
+                    return false;
+                }
+                else {
+                    return true;
+                }
+            } // EINDE HET MAG NIET LEEG ZIJN
+            //POSTCODE NIET LANGER DAN 7
+            function postcode() {
+                var x, text;
+                // Get the value of the input field with id="numb"
+                x = document.forms["Adres"]["postcode"].value;
+                if (x.length > 7) {
+                    alert("Een postcode kan geschreven worden als 7777 BB of 7777bb maar kan niet langer.");
+                    return false;
+                }
+                else {
+                    return true;
+                }
+            } //EINDE NIET LANGER DAN 7   
+            //NUMMER MOET EEN NUMMER ZIJN                
+            function nummer() {
+                var x, text;
+                // Get the value of the input field with id="numb"
+                x = document.getElementById("nummer").value;
+                // If x is Not a Number or less than one or greater than 10
+                if (isNaN(x) || x < 1 || x > 10) {
+                    text = "Input not valid";
+                }
+                else {
+                    text = "Input OK";
+                    return true;
+                }
+                document.getElementById("demo").innerHTML = text;
+            } //EINDE MOET EEN NUMMER ZIJN
+            //WIJ WILLEN GEEN CODE MOGELIJK MAKEN
+            function geencode() {
+                x = document.getElementById("email").value;
+                y = document.getElementById("postcode").value;
+                z = document.getElementById("nummer").value;
+                var emailpatt = new RegExp('/^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/i');
+                var postcodepatt = new RegExp('/^[1-9][0-9]{3} ?(?!sa|sd|ss)[a-z]{2}$/i;');
+                var nummerpatt = new RegExp('/^[0-9][/;');
+                var emailres = emailpatt.test(x);
+                var postcoderes = postcodepatt.test(y);
+                var nummerres = nummerpatt.test(z);
+                if ((emailres !== true) || (postcoderes !== true) || (nummerres !== true)) {
+                    alert("Die tekens willen we hier niet hebben")
+                    return false;
+                }
+                else {
+                    return true;
+                }
+            } //EINDE GEENCODE
+            
+        </script>
+
+</body>
+
+</html>
