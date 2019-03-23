@@ -10,7 +10,7 @@ var myVar;
 var drawdata;
 
 function setup() {
-    createCanvas(innerWidth, innerHeight);
+    createCanvas(innerWidth - 50, innerHeight -500);
     for (var i = 0; i < 10; i++) {
         drops[i] = new Drop();
     };

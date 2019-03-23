@@ -5,6 +5,14 @@ header,
     display: inline;
 }
 
+nav{
+text-decoration:none;
+font-size:22px;
+color:white;
+
+}
+
+
 a {
     text-decoration: none;
 }
