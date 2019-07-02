@@ -9,7 +9,6 @@
         <script src="p5.js"></script>
         <script src="p5.dom.js"></script>
         <script src="p5.sound.js"></script>
-        <script src="https://www.gstatic.com/firebasejs/5.5.8/firebase.js"></script>
         <script src="sketch.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -42,11 +41,38 @@
             }
         </style>
     </head>
-
     <body>
-         <nav><a href="http://www.patientje.nl"><i class="fa fa-home" aria-hidden="true"></i>Patientje</a></nav>
-        <div id="shopping"> <a href="http://www.patientje.nl">Items in wagen: <div id="noitems">0</div>
-       <i class="fa fa-shopping-cart fa-2x"></i></a> </div>
+        <div class="topnav" id="myTopnav">
+  <a href="http://www.spesjaal.com">Home</a>
+  <a href="http://www.spesjaal.com/patientje">Patientje</a>
+  <a href="http://www.spesjaal.com/wvdd">WVDD</a>
+  <div class="dropdown">
+    <button class="dropbtn">Sketches 
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div id="drop" class="dropdown-content">
+      <a href="http://Spesjaal.com/Raingame/public">Rain Game</a>
+      <a href="#">Link 2</a>
+      <a href="#">Link 3</a>
+    </div>
+  </div> 
+  <a id="shop" style="float:right" href="http://www.spesjaal.com">Items in wagen: <div id="noitems">0</div>
+       <i class="fa fa-shopping-cart fa-1x"></i></a>
+  <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+</div>
+        
+        
+<!--
+
+  <li><a href="#home">Home</a></li>
+  <li><a href="#news">News</a></li>
+  <li><a href="#contact">Contact</a></li>
+  <li style="float:right"><a class="active" id="shopping" href="http://www.patientje.nl">Items in wagen: <div id="noitems">0</div>
+       <i class="fa fa-shopping-cart fa-2x"></i></a></li>
+-->
+
+
+
         <div id="container" class="w3-display-middle">
             <div id="headerr"></div>
             <div class="card">
@@ -87,7 +113,7 @@
             </div>
             
 
-                   <form action="http://www.patientje.nl">  
+                   <form method="post" action="http://www.patientje.nl">  
                                            
 
                     <input type="submit" id="Afrekenen" value="Terug naar Patientje"> <br>
@@ -112,8 +138,12 @@
                     
                     
                     <br>
-                    <br> </a>
+                    <br>
+            <form>
                 <input type='hidden' name='input_name' value="<?php echo htmlentities(serialize($array_name)); ?>" /> </form>
+        
+ 
+        
             <script>
                   $(document).ready(function(){
                 var theTotal = 0;
@@ -143,7 +173,17 @@
     $("#collosjaalval").val("collosjaal");
   });                      
                       });
-            </script>
-    </body>
-
-    </html>
+                
+                
+   function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}             
+        </script>
+                 </div>
+        </body> 
+</html>

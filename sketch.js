@@ -9,9 +9,11 @@ var items = [];
 //document.getElementById("spes").innerHTML = 0;
 //console.log(hoeveel);
 function setup() {
-	canvas = createCanvas(windowWidth, windowHeight);
-    canvas.position(0, 0);
-    canvas.style('z-index', '-1');
+
+	canvas = createCanvas(windowWidth, windowHeight -25);
+    canvas.position(0, 25);
+    canvas.style('z-index', '-3');
+
 for (var i = 0; i < 3; i++) {
 spesjalen[i] = new Spesjaal();        
 }//CONSTRUCTOR SPESJAAL
