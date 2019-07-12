@@ -11,9 +11,14 @@ var drawdata;
 
 function setup() {
     createCanvas(innerWidth, innerHeight);
-    for (var i = 0; i < 10; i++) {
+    for (let i = 0; i < 10; i++) {
         drops[i] = new Drop();
     };
+    
+        for (let i = 0; i < 4; i++) {
+        lifes.push(1);
+    };
+    
     socket = io.connect('https://git.heroku.com/raingame.git'); // maakt connectie met de server vanaf de client
     //socket.on('mouse', newDrawing);
     resetSketch();
@@ -43,14 +48,14 @@ function scoreIt() {
     text(score, 10, 30);
     text(this.highscore, 10, 60);
 } //EINDE scoreIt
-function loseLife() {
-    lifelost = true;
-    if (lifelost === true) {
-        clearTimeout(myVar);
-    }
-} //EINDE loseLife            
+                                                                        //function loseLife() {
+                                                                        //    lifelost = true;
+                                                                        //    if (lifelost === true) {
+                                                                        //        clearTimeout(myVar);
+                                                                        //    }
+                                                                        //} //EINDE loseLife            
 function eindSpel() {
-    if (lifes.length === 0) {
+    if (lifes.length <= 1) {
         alert("You got wet");
         resetSketch();
     } //EINDE IF
@@ -58,7 +63,7 @@ function eindSpel() {
 //HIER BEGINT DE DRAW FUNCTIE
 function resetSketch() {
     ship = new Ship();
-    this.highscore = 0;
+//    this.highscore = 0;
     //        var data = {
     //        x: ship.x, 
     //        y: ship.y,
@@ -66,8 +71,8 @@ function resetSketch() {
     //        h: ship.h,
     //        score: highscore
     //    }
-    for (var i = 0; i < 3; i++) {
-        lifes[i] = new Life();
+        for (let i = 0; i < 4; i++) {
+        lifes.push(1);
     };
     //socket.emit('ship', data) // Emit is de brug naar de server
 } //EINDE RESETSKETCH
@@ -79,8 +84,10 @@ function draw(moreData) {
             drops[i].push = new Drop();
         }
         if (drops[i].hits(ship)) {
+            console.log("true");
             drops[i].highlight();
-            loseLife();
+            lifes.splice(0,1);
+            //loseLife();
             if (this.score > this.highscore) {
                 this.highscore = this.score;
             }
@@ -89,16 +96,19 @@ function draw(moreData) {
         } //EINDE IF DROPS HIT SHIP
         drops[i].show();
         drops[i].fall();
-    } //EINDE FOR DROPS
-    for (var j = lifes.length - 1; j >= 0; j--) {
-        stroke(51);
-        if (lifelost === true) {
-            lifelost = false;
-            lifes.splice(j, 1);
-            console.log("happened");
-        } //Einde if spliceIT
-        line(innerWidth - 15 * j, 30, innerWidth - 15, 60);
-    } //EINDE FOR LIFES ARRAY
+    }                                                                        //    } //EINDE FOR DROPS
+                                                                                //    for (var j = lifes.length - 1; j >= 0; j--) {
+                                                                                //        stroke(51);
+                                                                                //        if (lifelost === true) {
+                                                                                //            lifelost = false;
+                                                                                //            lifes.splice(j, 1);
+                                                                                //            console.log("happened");
+                                                                                //        } //Einde if spliceIT
+                                                                                //        line(innerWidth - 15 * j, 30, innerWidth - 15, 60);
+                                                                                //    } //EINDE FOR LIFES ARRAY
+    
+    
+    
     ship.show();
     ship.move();
     ship.limit();

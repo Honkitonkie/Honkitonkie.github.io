@@ -23,14 +23,14 @@ function Drop() {
     }
     this.hits = function (ship) {
             //console.log(ship.x, ship.y);
-            if (this.y > ship.y && this.y < height) {
+            if (this.y >= ship.y && this.y <= height) {
                 if (this.x > (ship.x - (ship.w / 2)) && this.x < (ship.x + (ship.w / 2))) {   
                     return true;
                 }
             }
         } //EINDE THIS.HITS
     this.highlight = function() {
-        background(200);
+        background(255);
     }
     
     
