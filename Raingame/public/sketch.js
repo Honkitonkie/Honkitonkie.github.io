@@ -14,7 +14,7 @@ function setup() {
     for (var i = 0; i < 10; i++) {
         drops[i] = new Drop();
     };
-    socket = io.connect('http://www.patientje.nl/Raingame/public/index.html'); // maakt connectie met de server vanaf de client
+    socket = io.connect('https://git.heroku.com/raingame.git'); // maakt connectie met de server vanaf de client
     //socket.on('mouse', newDrawing);
     resetSketch();
     socket.on('ship', newDrawing);
