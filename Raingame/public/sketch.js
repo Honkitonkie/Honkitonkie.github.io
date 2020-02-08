@@ -19,7 +19,7 @@ function setup() {
         lifes.push(1);
     };
     
-    socket = io.connect('https://git.heroku.com/raingame.git'); // maakt connectie met de server vanaf de client
+    socket = io.connect('http://www.spesjaal.com/raingame/public/index.html'); // maakt connectie met de server vanaf de client
     //socket.on('mouse', newDrawing);
     resetSketch();
     socket.on('ship', newDrawing);
