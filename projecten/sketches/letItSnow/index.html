@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="theme-color" content="#ffffff">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.10.2/p5.js" target="_blank" rel="nofollow"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.3.11/addons/p5.dom.js" target="_blank" rel="nofollow"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <meta charset="utf-8">
+
+  <meta property="og:title" content="Merry Christmas!">
+  <meta property="og:description" content="Keser maakt werk van een witte kerst en doet een belofte voor het nieuwe jaar">
+  <meta property="og:image" content="https://werkenbijkeser.nl/snow/snow.jpg">
+  <meta property="og:url" content="https:/werkenbijkeser.nl/snow/index.html">
+
+  <meta property="title" content="Merry Christmas!">
+  <meta property="description" content="Keser maakt werk van een witte kerst en doet een belofte voor het nieuwe jaar">
+  <meta property="image" content="https://werkenbijkeser.nl/snow/snow.jpg">
+  <meta property="url" content="https:/werkenbijkeser.nl/snow/index.html">
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-WNTW7DQ');</script>
+  <!-- End Google Tag Manager -->
+
+
+
+  <link rel="apple-touch-icon" sizes="57x57" href="https://www.keser.nl/favicon/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="https://www.keser.nl/favicon/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="https://www.keser.nl/favicon/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="https://www.keser.nl/favicon/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="https://www.keser.nl/favicon/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="https://www.keser.nl/favicon/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="https://www.keser.nl/favicon/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="https://www.keser.nl/favicon/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://www.keser.nl/favicon/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="https://www.keser.nl/favicon/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://www.keser.nl/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="https://www.keser.nl/favicon/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://www.keser.nl/favicon/favicon-16x16.png">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="https://www.keser.nl/favicon/ms-icon-144x144.png">
+
+
+
+
+  <link rel="stylesheet" href="https://www.keser.nl/images/assets/builds/style.css">
+  <link rel="stylesheet" href="style.css">
+  <script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script>
+  <script src="https://use.typekit.net/ryg4ldq.js"></script>
+
+  <style type="text/css">
+    @font-face {
+      font-family: tk-urbana-n4;
+      src: url(https://use.typekit.net/af/f04d01/00000000000000003b9afd37/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3) format("woff2"), url(https://use.typekit.net/af/f04d01/00000000000000003b9afd37/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3) format("woff"), url(https://use.typekit.net/af/f04d01/00000000000000003b9afd37/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3) format("opentype");
+      font-weight: 400;
+      font-style: normal;
+    }
+
+    @font-face {
+      font-family: tk-urbana-i4;
+      src: url(https://use.typekit.net/af/a6c1cd/00000000000000003b9afd35/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3) format("woff2"), url(https://use.typekit.net/af/a6c1cd/00000000000000003b9afd35/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3) format("woff"), url(https://use.typekit.net/af/a6c1cd/00000000000000003b9afd35/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3) format("opentype");
+      font-weight: 400;
+      font-style: italic;
+    }
+
+    @font-face {
+      font-family: tk-urbana-n7;
+      src: url(https://use.typekit.net/af/fb7df1/00000000000000003b9afd3a/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3) format("woff2"), url(https://use.typekit.net/af/fb7df1/00000000000000003b9afd3a/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3) format("woff"), url(https://use.typekit.net/af/fb7df1/00000000000000003b9afd3a/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3) format("opentype");
+      font-weight: 700;
+      font-style: normal;
+    }
+
+    @font-face {
+      font-family: tk-urbana-i7;
+      src: url(https://use.typekit.net/af/1a4fc0/00000000000000003b9afd33/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i7&v=3) format("woff2"), url(https://use.typekit.net/af/1a4fc0/00000000000000003b9afd33/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i7&v=3) format("woff"), url(https://use.typekit.net/af/1a4fc0/00000000000000003b9afd33/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i7&v=3) format("opentype");
+      font-weight: 700;
+      font-style: italic;
+    }
+
+    @font-face {
+      font-family: tk-urbana-n3;
+      src: url(https://use.typekit.net/af/2eef59/00000000000000003b9afd32/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n3&v=3) format("woff2"), url(https://use.typekit.net/af/2eef59/00000000000000003b9afd32/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n3&v=3) format("woff"), url(https://use.typekit.net/af/2eef59/00000000000000003b9afd32/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n3&v=3) format("opentype");
+      font-weight: 300;
+      font-style: normal;
+    }
+
+    @font-face {
+      font-family: tk-urbana-i3;
+      src: url(https://use.typekit.net/af/03e4ae/00000000000000003b9afd38/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i3&v=3) format("woff2"), url(https://use.typekit.net/af/03e4ae/00000000000000003b9afd38/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i3&v=3) format("woff"), url(https://use.typekit.net/af/03e4ae/00000000000000003b9afd38/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i3&v=3) format("opentype");
+      font-weight: 300;
+      font-style: italic;
+    }
+
+    @font-face {
+      font-family: tk-urbana-n6;
+      src: url(https://use.typekit.net/af/aa8487/00000000000000003b9afd39/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n6&v=3) format("woff2"), url(https://use.typekit.net/af/aa8487/00000000000000003b9afd39/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n6&v=3) format("woff"), url(https://use.typekit.net/af/aa8487/00000000000000003b9afd39/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n6&v=3) format("opentype");
+      font-weight: 600;
+      font-style: normal;
+    }
+
+    @font-face {
+      font-family: tk-urbana-i6;
+      src: url(https://use.typekit.net/af/99139e/00000000000000003b9afd36/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i6&v=3) format("woff2"), url(https://use.typekit.net/af/99139e/00000000000000003b9afd36/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i6&v=3) format("woff"), url(https://use.typekit.net/af/99139e/00000000000000003b9afd36/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i6&v=3) format("opentype");
+      font-weight: 600;
+      font-style: italic;
+    }
+    @font-face {
+      font-family: urbana;
+      src: url(https://use.typekit.net/af/f04d01/00000000000000003b9afd37/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3) format("woff2"), url(https://use.typekit.net/af/f04d01/00000000000000003b9afd37/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3) format("woff"), url(https://use.typekit.net/af/f04d01/00000000000000003b9afd37/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3) format("opentype");
+      font-weight: 400;
+      font-style: normal;
+    }
+
+    @font-face {
+      font-family: urbana;
+      src: url(https://use.typekit.net/af/a6c1cd/00000000000000003b9afd35/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3) format("woff2"), url(https://use.typekit.net/af/a6c1cd/00000000000000003b9afd35/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3) format("woff"), url(https://use.typekit.net/af/a6c1cd/00000000000000003b9afd35/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3) format("opentype");
+      font-weight: 400;
+      font-style: italic;
+    }
+
+    @font-face {
+      font-family: urbana;
+      src: url(https://use.typekit.net/af/fb7df1/00000000000000003b9afd3a/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3) format("woff2"), url(https://use.typekit.net/af/fb7df1/00000000000000003b9afd3a/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3) format("woff"), url(https://use.typekit.net/af/fb7df1/00000000000000003b9afd3a/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3) format("opentype");
+      font-weight: 700;
+      font-style: normal;
+    }
+
+    @font-face {
+      font-family: urbana;
+      src: url(https://use.typekit.net/af/1a4fc0/00000000000000003b9afd33/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i7&v=3) format("woff2"), url(https://use.typekit.net/af/1a4fc0/00000000000000003b9afd33/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i7&v=3) format("woff"), url(https://use.typekit.net/af/1a4fc0/00000000000000003b9afd33/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i7&v=3) format("opentype");
+      font-weight: 700;
+      font-style: italic;
+    }
+
+    @font-face {
+      font-family: urbana;
+      src: url(https://use.typekit.net/af/2eef59/00000000000000003b9afd32/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n3&v=3) format("woff2"), url(https://use.typekit.net/af/2eef59/00000000000000003b9afd32/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n3&v=3) format("woff"), url(https://use.typekit.net/af/2eef59/00000000000000003b9afd32/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n3&v=3) format("opentype");
+      font-weight: 300;
+      font-style: normal;
+    }
+
+    @font-face {
+      font-family: urbana;
+      src: url(https://use.typekit.net/af/03e4ae/00000000000000003b9afd38/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i3&v=3) format("woff2"), url(https://use.typekit.net/af/03e4ae/00000000000000003b9afd38/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i3&v=3) format("woff"), url(https://use.typekit.net/af/03e4ae/00000000000000003b9afd38/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i3&v=3) format("opentype");
+      font-weight: 300;
+      font-style: italic;
+    }
+
+    @font-face {
+      font-family: urbana;
+      src: url(https://use.typekit.net/af/aa8487/00000000000000003b9afd39/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n6&v=3) format("woff2"), url(https://use.typekit.net/af/aa8487/00000000000000003b9afd39/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n6&v=3) format("woff"), url(https://use.typekit.net/af/aa8487/00000000000000003b9afd39/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n6&v=3) format("opentype");
+      font-weight: 600;
+      font-style: normal;
+    }
+
+    @font-face {
+      font-family: urbana;
+      src: url(https://use.typekit.net/af/99139e/00000000000000003b9afd36/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i6&v=3) format("woff2"), url(https://use.typekit.net/af/99139e/00000000000000003b9afd36/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i6&v=3) format("woff"), url(https://use.typekit.net/af/99139e/00000000000000003b9afd36/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i6&v=3) format("opentype");
+      font-weight: 600;
+      font-style: italic;
+    }
+  </style>
+  <script>try { Typekit.load({ async: true }); } catch (e) { }</script>
+  <script type="text/javascript">try { Typekit.load(); } catch (e) { }</script>
+
+
+</head>
+<body>
+  
+  <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WNTW7DQ"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <script type="text/javascript" src="sketch.js"></script>
+  <script type="text/javascript" src="flake.js"></script>
+
+  <header>
+
+    <div class="iw">
+
+      <div id="left">
+        <a class="logo" href="https://www.keser.nl">
+          <img src="https://www.keser.nl/images/assets/logo-orange.svg">
+          <span>Recruiters waarmee je kunt praten</span>
+        </a>
+
+        <a class="lang flag_english" href="https://www.keser.nl/en/home"><span>Read in </span>English »</a>
+
+      </div>
+
+      <div id="right">
+        <div id="contact_wrap">
+          <a class="number" href="tel://0886488988">088-648 89 88</a>
+        </div>
+
+        <div id="nav_wrap" class="def_language">
+          <div id="items_wrap">
+            <nav class="menu" id="employer">
+              <a class="toggle">
+                <span>Ik ben een werkgever</span>
+                <button></button>
+              </a>
+              <div>
+
+
+
+                <ul>
+                  <li>
+                    <a href="https://www.keser.nl/werkgever/diensten-werkwijze">Diensten & Werkwijze</a>
+                  </li>
+
+                  <li>
+                    <a href="https://www.keser.nl/werkgever/kandidaten">Kandidaten</a>
+                  </li>
+
+                  <li>
+                    <a href="https://www.keser.nl/werkgever/order-2-cash">Order 2 Cash</a>
+                  </li>
+
+                  <li>
+                    <a href="https://www.keser.nl/werkgever/keser-academy">Keser Academy</a>
+                  </li>
+
+                  <li>
+                    <a href="https://www.keser.nl/werkgever/over-keser">Over Keser & Team</a>
+                  </li>
+
+                  <li>
+                    <a href="https://www.keser.nl/werkgever/over-keser#contact">Contact</a>
+                  </li>
+                </ul>
+
+
+
+
+
+                <div class="responsive_contact">
+                  <a class="number" href="tel://0886488988">088-648 89 88</a><br>
+                  <a class="mail" href="mailto:info@keser.nl">info@keser.nl</a>
+                </div>
+              </div>
+            </nav>
+
+            <nav class="menu" id="candidate">
+              <a class="toggle">
+                <span>Ik ben een kandidaat</span>
+                <button></button>
+              </a>
+              <div>
+
+
+                <ul>
+                  <li>
+                    <a href="https://www.keser.nl/kandidaat/vacatures">Vacatures</a>
+                  </li>
+
+                  <li>
+                    <a href="https://www.keser.nl/kandidaat/het-sollicitatieproces">Het sollicitatieproces</a>
+                  </li>
+
+                  <li>
+                    <a href="https://www.keser.nl/kandidaat/inschrijven">Inschrijven</a>
+                  </li>
+
+                  <li>
+                    <a href="https://www.werkenbijkeser.nl" class="here">Werkenbij</a>
+                  </li>
+
+                  <li>
+                    <a href="https://www.keser.nl/kandidaat/faq">FAQ</a>
+                  </li>
+
+                  <li>
+                    <a href="https://www.keser.nl/kandidaat/keser-academy">Keser Academy</a>
+                  </li>
+
+                  <li>
+                    <a href="https://www.keser.nl/kandidaat/over-keser">Over Keser & Team</a>
+                  </li>
+
+                  <li>
+                    <a href="https://www.keser.nl/werkgever/over-keser#contact">Contact</a>
+                  </li>
+
+                  <li>
+                    <a href="https://keser.carerix.net">Inloggen</a>
+                  </li>
+                </ul>
+
+
+
+
+
+
+                <div class="responsive_contact">
+                  Keser Interim &amp; Recruitment<br>
+                  Rompertdreef 3<br>
+                  5223 ED 's-Hertogenbosch
+                </div>
+              </div>
+            </nav>
+          </div>
+
+          <nav class="menu" id="responsive">
+            <a class="toggle">
+              <span id="menu">Menu</span>
+              <span id="close">Sluiten</span>
+              <button></button>
+            </a>
+          </nav>
+        </div>
+
+
+
+      </div> <!-- end div#right -->
+
+    </div> <!-- end div.iw -->
+
+  </header>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <script src="https://www.keser.nl/images/assets/builds/main.bundle.js"></script>
+</body>
+
+</html>

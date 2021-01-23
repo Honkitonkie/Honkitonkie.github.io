@@ -8,6 +8,7 @@ var lifelost = false;
 var spliceIt = false;
 var myVar;
 var drawdata;
+var linkie;
 
 function setup() {
     createCanvas(innerWidth, innerHeight);
@@ -23,6 +24,12 @@ function setup() {
     //socket.on('mouse', newDrawing);
     resetSketch();
     socket.on('ship', newDrawing);
+
+    // textje = createA("https://www.patientje.nl", "Patientje");
+    textje = createA("https://www.patientje.nl/projecten/", 
+    "Projecten", "_blank"); 
+    
+    textje.position(10, 10); 
 }
 
 function newDrawing(moreData) {
@@ -45,8 +52,12 @@ function mouseDragged(Ship) {
 function scoreIt() {
     this.score++;
     textSize(32);
-    text(score, 10, 30);
-    text(this.highscore, 10, 60);
+
+    textje.position(10, 10); 
+    // console.log(textje);
+    text(score, 10, 60);
+    text(this.highscore, 10, 90);
+
 } //EINDE scoreIt
                                                                         //function loseLife() {
                                                                         //    lifelost = true;
@@ -92,6 +103,7 @@ function draw(moreData) {
                 this.highscore = this.score;
             }
             this.score = 0;
+            
             eindSpel();
         } //EINDE IF DROPS HIT SHIP
         drops[i].show();
@@ -116,7 +128,7 @@ function draw(moreData) {
 //    mouseDragged();
 //    newDrawing();
     fill(random(0,255),random(0,255),random(0,255));
-    rect(drawdata, height - 60, 20, 60);
+    // rect(drawdata, height - 60, 20, 60);
     
 } //EINDE DRAW
 function keyReleased() {

@@ -1,0 +1,161 @@
+
+
+    html {
+    max-width: 100%;
+    overflow-x: hidden!important;
+    width: inherit;
+    height: inherit;
+    }
+
+    body {
+    max-width: 100%;
+    overflow: hidden!important;
+    width: inherit;
+    height: inherit;
+    }
+
+    .tk-urbana {
+    font-family: "urbana", sans-serif;
+    }
+
+
+    .vacatures:hover:after {
+    background-image: url(https://keser.nl/images/assets/icon-sprite-20.svg);
+    } 
+
+
+    .vacatures:hover {
+    color:#ff7b00;
+    background:#fff;
+    border: #ff7b00 solid 1px;
+    } 
+
+
+    .vacatures {
+    position: relative;
+    border-radius: 25px;
+    border: #fff solid 1px;
+    padding: 4px;
+    padding-left:8px;
+    padding-right: 8px;
+    background: transparent;
+    color: #fff;
+    display: block;
+    width: 100px;
+    max-width: 190px;
+    text-decoration: none;
+    }   
+
+
+    .vacatures:after {
+    display: inline-block;
+    background-image: url(https://keser.nl/images/assets/icon-sprite-12.svg);
+    background-size: 100% 100%;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    content: "";
+    line-height: 1.3em;
+    width: 15px;
+    height: 1em;
+    float: left;
+    transform: translateY(0.1em);
+    /* padding-left:26px;
+    padding-right:0px; */
+    }
+
+    .kandidaten:hover:after {
+    background-image: url(https://keser.nl/images/assets/icon-sprite-6.svg);
+    } 
+
+
+    .kandidaten:hover {
+    color:#0995cc;
+    background:#fff;
+    border: #0995cc solid 1px;
+    } 
+
+
+    .kandidaten {
+    position: relative;
+    border-radius: 25px;
+    border: #fff solid 1px;
+    padding: 4px;
+    padding-left:8px;
+    padding-right: 8px;
+    background: transparent;
+    color: #fff;
+    display: block;
+    width: 100px;
+    max-width: 190px;
+    text-decoration: none;
+    }   
+
+
+    .kandidaten:after {
+    display: inline-block;
+    background-image: url(https://keser.nl/images/assets/icon-sprite-12.svg);
+    background-size: 100% 100%;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    content: "";
+    line-height: 1.3em;
+    width: 15px;
+    height: 1em;
+    float: left;
+    transform: translateY(0.1em);
+    }
+
+
+
+    @media only screen and (max-width: 650px) {
+    .vacatures:after {
+    display: inline-block;
+    background-image: url(https://keser.nl/images/assets/icon-sprite-12.svg);
+    background-size: 100% 100%;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    content: "";
+    line-height: 1.3em;
+    width: 15px;
+    height: 1em;
+    float: left;
+    transform: translateY(0.15em);
+    }
+    .kandidaten:after {
+    display: inline-block;
+    background-image: url(https://keser.nl/images/assets/icon-sprite-12.svg);
+    background-size: 100% 100%;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    content: "";
+    line-height: 1.3em;
+    width: 15px;
+    height: 1em;
+    float: left;
+    transform: translateY(0.15em);
+    }
+    .kandidaten {
+    width: 85px;
+    }
+
+    .vacatures {
+    width: 85px;
+    }
+
+    header div#right div#nav_wrap.open nav#employer {
+    font-size: 10px;
+    margin-bottom: -10px;
+    }
+    header div#right div#nav_wrap.open nav#candidate {
+    font-size: 10px;
+    margin-bottom: -10px;
+    }
+    header div#right div#nav_wrap.open div#items_wrap {
+    top:59px; 
+    }
+
+    header {
+    font-size: 12px;
+    }
+
+    }
