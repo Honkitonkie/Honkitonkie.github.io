@@ -42,10 +42,6 @@ body, html {
 <!-- Links (sit on top) -->
 <div class="w3-top">
   <div class="w3-row w3-padding w3-black">
-
-    <!-- <div class="w3-col s3">
-      <a href="../projecten" class="w3-button w3-block w3-black">Projecten</a>
-    </div> -->
     <div class="w3-col s3">
       <a href="/" class="w3-button w3-block w3-black"></a>
     </div>
@@ -75,16 +71,16 @@ body, html {
   <div class="w3-content" style="max-width:700px">
     <h5 class="w3-center w3-padding-64"><span class="w3-tag w3-wide">Over patientje.nl</span></h5>
     <p>Patientje.nl is een project om beter te worden. Beter waarin? Alles wat met design, animatie en development te maken heeft. Deze site laat een overzicht zien van mijn projecten, hoofdpijntjes en andere kwalen.</p>
-    <p>Voor de kenner makkelijker te zien dan voor anderen. Maar veel van mijn projecten zijn gemaakt om nieuwe kennis in te zetten of nieuwe frameworks uit te proberen.</p>
+    <p>Veel van deze projecten zijn om kennis te maken met nieuwe frameworks of technologie of om  uit te proberen.</p>
     <div class="w3-panel w3-leftbar w3-light-grey">
-      <p><i>"The way to get started is to quit talking and start doing" <br>Walt Disney</i></p>
+      <p><i>"The way to get started is to quit talking and start doing"</i></p>
        </div>
   </div>
 </div>
 <!-- Contact/Area Container -->
 <div class="w3-container" id="where" style="padding-bottom:32px;">
   <div class="w3-content" style="max-width:700px">
-    <p><span class="w3-tag">FYI!</span> Heb jij een bepaald project in gedachten? Wil jij ook beter worden? Ben je al beter en wil je iets delen? Ik hoor graag van je.</p>
+    <p><span class="w3-tag">FYI!</span> Quote is van Walt Disney.</p>
   </div>
 </div>
 
@@ -96,29 +92,7 @@ body, html {
   <p>Bekijk <a href="https://www.patientje.nl/projecten/" title="projecten" target="_blank" class="w3-hover-text-green">de projecten</a></p>
 </footer>
 
-<!-- Add Google Maps -->
 <script>
-function alarmeren(){
-    alert('sorry, nog niet aan toegekomen');
-    
-};
-    
-    function myMap()
-{
-  myCenter=new google.maps.LatLng(41.878114, -87.629798);
-  var mapOptions= {
-    center:myCenter,
-    zoom:12, scrollwheel: false, draggable: false,
-    mapTypeId:google.maps.MapTypeId.ROADMAP
-  };
-  var map=new google.maps.Map(document.getElementById("googleMap"),mapOptions);
-
-  var marker = new google.maps.Marker({
-    position: myCenter,
-  });
-  marker.setMap(map);
-}
-
 // Tabbed Menu
 function openMenu(evt, menuName) {
   var i, x, tablinks;
@@ -135,7 +109,5 @@ function openMenu(evt, menuName) {
 }
 document.getElementById("myLink").click();
 </script>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBu-916DdpKAjTmJNIgngS6HL_kDIKU0aU&callback=myMap"></script>
-
 </body>
 </html>
